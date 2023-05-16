@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import css from './Modal.module.css';
 
 export class Modal extends Component {
   componentDidMount() {
@@ -19,8 +20,8 @@ export class Modal extends Component {
   render() {
     const { largeImageURL } = this.props;
     return (
-      <div onClick={this.handleKeyDown}>
-        <div>
+      <div onClick={this.handleKeyDown} className={css.Overlay}>
+        <div className={css.Modal}>
           <img src={largeImageURL} alt="" />
         </div>
       </div>

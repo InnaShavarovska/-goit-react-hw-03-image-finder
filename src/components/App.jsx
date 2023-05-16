@@ -27,7 +27,7 @@ export class App extends Component {
       isLoading: true,
       images: [],
     });
-    this.fetchGallery(e.target.search.value, this.state.page);
+    this.fetchGallery(event.target.search.value, this.state.page);
   };
 
   onClickImage = url => {
